@@ -25,7 +25,7 @@
 #include <nav_msgs/Odometry.h>
 #include <octomap_world/octomap_manager.h>
 #include <multiagent_collision_check/Segment.h>
-#include <nbvplanner/nbvp_srv.h>
+#include <planner_msgs/planner_srv.h>
 #include <nbvplanner/mesh_structure.h>
 #include <nbvplanner/tree.hpp>
 #include <nbvplanner/rrt.h>
@@ -70,7 +70,7 @@ class nbvPlanner
   bool setParams();
   void posCallback(const geometry_msgs::PoseWithCovarianceStamped& pose);
   void odomCallback(const nav_msgs::Odometry& pose);
-  bool plannerCallback(nbvplanner::nbvp_srv::Request& req, nbvplanner::nbvp_srv::Response& res);
+  bool plannerCallback(planner_msgs::planner_srv::Request& req, planner_msgs::planner_srv::Response& res);
   void insertPointcloudWithTf(const sensor_msgs::PointCloud2::ConstPtr& pointcloud);
   void insertPointcloudWithTfCamUp(const sensor_msgs::PointCloud2::ConstPtr& pointcloud);
   void insertPointcloudWithTfCamDown(const sensor_msgs::PointCloud2::ConstPtr& pointcloud);

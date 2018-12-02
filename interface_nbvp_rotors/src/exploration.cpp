@@ -30,7 +30,7 @@
 
 #include <mav_msgs/conversions.h>
 #include <mav_msgs/default_topics.h>
-#include <nbvplanner/nbvp_srv.h>
+#include <planner_msgs/planner_srv.h>
 
 int main(int argc, char** argv)
 {
@@ -109,7 +109,7 @@ int main(int argc, char** argv)
   int iteration = 0;
   while (ros::ok()) {
     ROS_INFO_THROTTLE(0.5, "Planning iteration %i", iteration);
-    nbvplanner::nbvp_srv planSrv;
+    planner_msgs::planner_srv planSrv;
     planSrv.request.header.stamp = ros::Time::now();
     planSrv.request.header.seq = iteration;
     planSrv.request.header.frame_id = "world";

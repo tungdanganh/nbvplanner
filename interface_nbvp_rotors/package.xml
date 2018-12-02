@@ -14,16 +14,18 @@
   <author>Mina Kamel</author>
   <author>Janosch Nikolic</author>
   <author>Markus Achtelik</author>
-  
+
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>nbvplanner</build_depend>
   <build_depend>trajectory_msgs</build_depend>
   <build_depend>mav_msgs</build_depend>
   <build_depend>tf</build_depend>
-  
+  <build_depend>planner_msgs</build_depend>
+
   <run_depend>nbvplanner</run_depend>
   <run_depend>trajectory_msgs</run_depend>
   <run_depend>mav_msgs</run_depend>
   <run_depend>tf</run_depend>
+  <run_depend>planner_msgs</run_depend>
 
 </package>

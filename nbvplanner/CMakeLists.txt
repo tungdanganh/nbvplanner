@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   kdtree
   multiagent_collision_check
   voxblox_ros
+  planner_msgs
 )
 find_package(cmake_modules REQUIRED)
 find_package(Eigen REQUIRED)
@@ -20,7 +21,6 @@ find_package(octomap REQUIRED)
 
 add_service_files(
   FILES
-  nbvp_srv.srv
 )
 
 generate_messages(
@@ -33,7 +33,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include ${Eigen_INCLUDE_DIRS} ${OCTOMAP_INCLUDE_DIRS} ${catkin_INCLUDE_DIRS}
   LIBRARIES nbvplanner ${catkin_LIBRARIES} ${OCTOMAP_LIBRARIES}
-  CATKIN_DEPENDS message_runtime roscpp geometry_msgs visualization_msgs octomap_world tf kdtree voxblox_ros
+  CATKIN_DEPENDS message_runtime roscpp geometry_msgs visualization_msgs octomap_world tf kdtree voxblox_ros planner_msgs
 )
 
 include_directories(

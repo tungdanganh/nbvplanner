@@ -157,8 +157,8 @@ void nbvInspection::nbvPlanner<stateVec>::odomCallback(
 }
 
 template<typename stateVec>
-bool nbvInspection::nbvPlanner<stateVec>::plannerCallback(nbvplanner::nbvp_srv::Request& req,
-                                                          nbvplanner::nbvp_srv::Response& res)
+bool nbvInspection::nbvPlanner<stateVec>::plannerCallback(planner_msgs::planner_srv::Request& req,
+                                                          planner_msgs::planner_srv::Response& res)
 {
   ros::Time computationTime = ros::Time::now();
   // Check that planner is ready to compute path.
