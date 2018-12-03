@@ -28,3 +28,6 @@
 [submodule "catkin_simple"]
 	path = catkin_simple
 	url = https://github.com/catkin/catkin_simple.git
+[submodule "rotors_simulator"]
+	path = rotors_simulator
+	url = https://github.com/unr-arl/rotors_simulator/
