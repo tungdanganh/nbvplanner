@@ -214,7 +214,8 @@ bool nbvInspection::nbvPlanner<stateVec>::plannerCallback(planner_msgs::planner_
     segment.poses.push_back(res.path.back());
   }
   evadePub_.publish(segment);
-  ROS_INFO("Path computation lasted %2.3fs", (ros::Time::now() - computationTime).toSec());
+  ROS_INFO("Finished 1st layer: path computation lasted %2.3fs with %d nodes",
+            (ros::Time::now() - computationTime).toSec(), tree_->getCounter());
   return true;
 }
 
